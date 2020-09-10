@@ -1,2 +1,8 @@
-# md-care-api
-endpoint for API
+# install
+````
+npm install
+npm i -g typescript
+tsc
+node .
+````
+
