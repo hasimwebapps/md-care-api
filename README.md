@@ -6,3 +6,8 @@ tsc
 node .
 ````
 
+# run
+```
+nodemon
+```
+
