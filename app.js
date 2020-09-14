@@ -3,8 +3,8 @@ import body            from 'koa-body';       // body parser
 import compose         from 'koa-compose';    // middleware composer
 import compress        from 'koa-compress';   // HTTP compression
 import session         from 'koa-session';    // session for flash messages
-import dotenv          from 'dotenv'; // load environment variables from a .env file into process.env
-dotenv.config();
+// import dotenv          from 'dotenv'; // load environment variables from a .env file into process.env
+// dotenv.config();
 
 const app = new Koa();
 
