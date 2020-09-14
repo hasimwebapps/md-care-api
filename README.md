@@ -5,7 +5,7 @@ node version = 12
 npm install
 
 # run
-nodemon app.js
+npm run start-dev
 
 ## Database schema
 ```sql
