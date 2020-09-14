@@ -106,6 +106,15 @@ app.use(routesAuth);
 
 
 app.use(Auth.middleware.verifyJwtApi());
+
+import routesMembers     from './routes-members.js';
+import routesTeams       from './routes-teams.js';
+import routesTeamMembers from './routes-team-members.js';
+app.use(routesMembers);
+app.use(routesTeams);
+app.use(routesTeamMembers);
+
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
 export default app;

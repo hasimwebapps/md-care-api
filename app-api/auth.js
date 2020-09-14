@@ -49,6 +49,7 @@ class Auth {
             role: user.Role.slice(0, 1).toLowerCase(), // make role available without db query
         };
         const token = jwt.sign(payload, process.env.JWT_SECRET_KEY, { expiresIn: '24h' });
+        // const token = jwt.sign(payload, process.env.JWT_SECRET_KEY, { expiresIn: '1m' });
         ctx.response.body = { jwt: token, root: 'Auth' };
     }
 
@@ -72,6 +73,7 @@ class Auth {
                 const payload = jwt.verify(token, secretKey); // throws on invalid token
 
                 // valid token: accept it...
+                console.log(payload, '**payload');
                 ctx.state.auth = authDetails(payload);
             } catch (err) {
                 if ([ 'invalid token', 'invalid signature', 'jwt malformed', 'jwt expired' ].includes(err.message)) {
